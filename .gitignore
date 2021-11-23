@@ -1,0 +1,13 @@
+checker_Mac
+*.o
+*.out
+*.dSYM
+ni_*
+.DS_Store
+todo.md
+*.dylib
+.vscode
+*.a
+*_debug
+server
+client
