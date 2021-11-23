@@ -6,7 +6,7 @@
 /*   By: gaguado- <gaguado-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 17:47:43 by gaguado-          #+#    #+#             */
-/*   Updated: 2021/11/23 17:29:43 by gaguado-         ###   ########.fr       */
+/*   Updated: 2021/11/23 17:42:15 by gaguado-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ int	main(int argc, char *argv[])
 	send_str(pid, argv[2]);
 	ft_putstr_fd("\nSent \"", 1);
 	ft_putstr_fd(argv[2], 1);
-	ft_putstr_fd("\"", 1);
+	ft_putstr_fd("\" to ", 1);
 	ft_putnbr_fd(pid, 1);
 	return (0);
 }
