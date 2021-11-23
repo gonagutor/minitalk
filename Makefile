@@ -6,7 +6,7 @@
 #    By: gaguado- <gaguado-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/06 13:52:06 by gaguado-          #+#    #+#              #
-#    Updated: 2021/11/23 17:39:17 by gaguado-         ###   ########.fr        #
+#    Updated: 2021/11/23 18:11:35 by gaguado-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,14 +37,16 @@ all: $(NAME)
 
 clean:
 	$(MAKE) -C ./$(LIBFTLOC) clean
-	rm -rf $(OBJS)
+	rm -rf $(OBJS_SERVER)
+	rm -rf $(OBJS_CLIENT)
 
 fclean: clean
 	$(MAKE) -C ./$(LIBFTLOC) fclean
 	rm -rf $(NAME)
+	rm -rf $(NAME_CLIENT)
 
 norme:
-	norminette $(SRC_DIR)/*.[ch] $(SRC_DIR)/instructions/*.[ch] $(LIBFTLOC)/srcs/*.[ch]
+	norminette $(SRC_DIR)/*.[ch] $(LIBFTLOC)/srcs/*.[ch] $(INCLUDES)/*.[ch] $(LIBFTLOC)/*.[ch]
 
 re: fclean all
 

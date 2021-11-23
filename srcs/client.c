@@ -6,7 +6,7 @@
 /*   By: gaguado- <gaguado-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 17:47:43 by gaguado-          #+#    #+#             */
-/*   Updated: 2021/11/23 17:42:15 by gaguado-         ###   ########.fr       */
+/*   Updated: 2021/11/23 18:10:50 by gaguado-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,8 +46,10 @@ int	main(int argc, char *argv[])
 {
 	int	pid;
 
-	pid = ft_atoi(argv[1]);
-	if (pid == -1 || pid == 0 || argc < 3)
+	pid = 0;
+	if (argc >= 3)
+		pid = ft_atoi(argv[1]);
+	if (argc < 3 || pid == -1 || pid == 0)
 	{
 		ft_putstr_fd("Wrong parameters. USAGE:\n\t", 1);
 		ft_putstr_fd("./client <Server PID> <String to send>\n", 1);
